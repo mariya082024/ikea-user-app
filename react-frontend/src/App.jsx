@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Button from '@mui/material/Button';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -68,7 +69,8 @@ function App() {
               <td>{user.name}</td>
               <td>{user.isAdmin.toString()}</td>
               <td>
-                <button data-id={user.id} onClick={deleteUser}>Delete</button>
+                {/* <button data-id={user.id} onClick={deleteUser}>Delete</button> */}
+                <Button variant="contained"data-id={user.id} onClick={deleteUser}>Delete</Button>
               </td>
 
             </tr>
